@@ -52,6 +52,9 @@
 			
 			// add it our data
 			options.data = data;
+
+			// use the width of the original select control
+			options.width = Math.max($this.width(), options.width);
 		
 			//make the input box into an autocomplete for the select items
 			$input.autocomplete(data, options);
@@ -68,7 +71,7 @@
 			$this.hide();
 
 			// make it the same width
-			$input.width($this.width());
+			$input.width(options.width);
 		});
 	};		  
   
